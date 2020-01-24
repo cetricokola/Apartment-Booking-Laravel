@@ -1,0 +1,15 @@
+let getters = {
+    projects: state => {
+        return state.projects
+    },
+    detailsh: state => {
+        return state.details
+    },
+    new_project: state => {
+        return state.new_project[state.new_project.length - 1]
+    },
+    blocks: state => {
+        return state.blocks
+    }
+}
+export default getters
