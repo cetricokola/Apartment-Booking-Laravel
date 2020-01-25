@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1ae5288-a068-4481-9228-6b2b214e0220" name="Default Changelist" comment="" />
+    <list default="true" id="f1ae5288-a068-4481-9228-6b2b214e0220" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/FloorRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/ReservationRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/UnitRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/FloorRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/UnitRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +36,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -115,6 +134,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1WmgwiIw7bOU4oDJra2eMBOBl6Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -161,7 +181,8 @@
       <option name="presentableId" value="Default" />
       <updated>1579760424417</updated>
       <workItem from="1579760428977" duration="46504000" />
-      <workItem from="1579877909456" duration="5350000" />
+      <workItem from="1579877909456" duration="5647000" />
+      <workItem from="1579943562002" duration="19104000" />
     </task>
     <servers />
   </component>
@@ -173,20 +194,20 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="602" y="39" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579870260641" />
-    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579871046832">
+    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579967014798">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579871046832" />
+    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579967014798" />
     <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.959@0.23.1680.959" timestamp="1579783090426" />
-    <state x="548" y="314" key="NewPhpClassDialog" timestamp="1579870544898">
+    <state x="548" y="314" key="NewPhpClassDialog" timestamp="1579959575290">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="548" y="314" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579870544898" />
+    <state x="548" y="314" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579959575290" />
     <state x="548" y="310" key="NewPhpClassDialog/0.23.1680.959@0.23.1680.959" timestamp="1579782989291" />
-    <state x="658" y="445" key="NewPhpFileDialog" timestamp="1579883391686">
+    <state x="658" y="445" key="NewPhpFileDialog" timestamp="1579951980739">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="658" y="445" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579883391686" />
+    <state x="658" y="445" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579951980739" />
     <state x="658" y="429" key="NewPhpFileDialog/0.23.1680.959@0.23.1680.959" timestamp="1579782930230" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1579877541406">
       <screen x="0" y="0" width="1680" height="1050" />

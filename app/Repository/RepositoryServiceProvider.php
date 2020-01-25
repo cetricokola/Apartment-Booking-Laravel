@@ -11,6 +11,9 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->registerProjectRepository();
         $this->registerBlockRepository();
+        $this->registerFloorRepository();
+        $this->registerUnitRepository();
+        $this->registerReservationRepository();
 
     }
 
@@ -22,5 +25,20 @@ class RepositoryServiceProvider extends ServiceProvider
     public function registerBlockRepository()
     {
         return $this->app->bind('App\Repository\Contracts\BlockRepositoryInterface', 'App\Repository\Eloquent\BlockRepository');
+    }
+
+    public function registerFloorRepository()
+    {
+        return $this->app->bind('App\Repository\Contracts\FloorRepositoryInterface', 'App\Repository\Eloquent\FloorRepository');
+    }
+
+    public function registerUnitRepository()
+    {
+        return $this->app->bind('App\Repository\Contracts\UnitRepositoryInterface', 'App\Repository\Eloquent\UnitRepository');
+    }
+
+    public function registerReservationRepository()
+    {
+        return $this->app->bind('App\Repository\Contracts\ReservationRepositoryInterface', 'App\Repository\Eloquent\ReservationRepository');
     }
 }

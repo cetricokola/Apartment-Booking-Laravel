@@ -32,6 +32,12 @@ let actions = {
             }).catch(err => {
             console.log(err)
         })
+    },
+    selectUnit({commit}, id){
+       commit('SELECT_UNIT', id);
+    },
+    removeUnit({commit}, id){
+        commit('REMOVE_UNIT', id);
     }
 };
 export default actions;

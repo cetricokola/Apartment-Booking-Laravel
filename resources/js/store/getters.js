@@ -1,3 +1,5 @@
+import state from "./state";
+
 let getters = {
     projects: state => {
         return state.projects
@@ -10,6 +12,9 @@ let getters = {
     },
     blocks: state => {
         return state.blocks
+    },
+    units: state =>{
+        return state.units
     }
 }
 export default getters

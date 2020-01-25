@@ -2,6 +2,7 @@ let state = {
     projects: [],
     new_project: [],
     details: [],
-    blocks: []
+    blocks: [],
+    units: []
 }
 export default state;
