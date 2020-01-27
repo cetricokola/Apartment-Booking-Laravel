@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/the_project', function () {
     return view('project');
 });
+Route::get('/successfully_booked', function () {
+    return view('successful_reservation');
+});
 Route::get('/dashboard', function () {
     return view('vue');
 });

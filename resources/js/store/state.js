@@ -3,6 +3,7 @@ let state = {
     new_project: [],
     details: [],
     blocks: [],
-    units: []
+    units: [],
+    reservations: []
 }
 export default state;

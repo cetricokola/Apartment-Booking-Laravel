@@ -33,11 +33,27 @@ let actions = {
             console.log(err)
         })
     },
-    selectUnit({commit}, id){
-       commit('SELECT_UNIT', id);
+    fetchReservations({commit}) {
+        HTTP.get('fetch_user_reservations')
+            .then(res => {
+                commit('FETCH_RESERVATIONS', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
     },
-    removeUnit({commit}, id){
+    selectUnit({commit}, id) {
+        commit('SELECT_UNIT', id);
+    },
+    removeUnit({commit}, id) {
         commit('REMOVE_UNIT', id);
+    },
+    deleteReservation({commit}, reservation) {
+        HTTP.delete(`delete_reservation/${reservation.id}`)
+            .then(res => {
+                commit('DELETE_RESERVATION', reservation);
+            }).catch(err => {
+            console.log(err)
+        })
     }
 };
 export default actions;

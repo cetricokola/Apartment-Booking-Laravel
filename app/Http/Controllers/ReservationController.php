@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ProjectResource;
 use App\Repository\Contracts\ReservationRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,6 +22,15 @@ class ReservationController extends Controller
     {
 //        Log::info($request->user('api')->id);
         $reservation = $this->reservation->bookApartmentUnits($request->units);
-        return response()->json([$reservation]);
+        ProjectResource::withoutWrapping();
+        return ProjectResource::collection($reservation);
+    }
+    public function fetchReservations(){
+        $reservations = $this->reservation->fetchReservations();
+        return response()->json($reservations);
+    }
+    public function deleteReservation(Request $request){
+        $reservations = $this->reservation->deleteReservation($request->id);
+        return response()->json($reservations);
     }
 }

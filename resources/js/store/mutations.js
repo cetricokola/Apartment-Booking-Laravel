@@ -12,6 +12,9 @@ let mutations = {
     FETCH_BLOCKS(state, block) {
         return state.blocks = block
     },
+    FETCH_RESERVATIONS(state, reservation) {
+        return state.reservations = reservation
+    },
     SELECT_UNIT(state, unit) {
         state.units.unshift(unit)
     },
@@ -19,6 +22,10 @@ let mutations = {
         let index = state.units.findIndex(item => item === unit);
         Vue.delete(state.units, index);
         // state.shows.splice(index, 1)
+    },
+    DELETE_RESERVATION(state, reservation) {
+        let index = state.reservations.findIndex(item => item.id === reservation.id);
+        Vue.delete(state.reservations, index);
     }
 
 };

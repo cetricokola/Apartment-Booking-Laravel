@@ -71,8 +71,21 @@ class ReservationRepository implements ReservationRepositoryInterface
         }
     }
 
-    public function getAvailableUnits()
+    public function fetchReservations()
     {
-        return Unit::doesntHave('reservations')->get();
+
+        return DB::table('reservations')
+            ->join('units', 'units.id', '=', 'reservations.unit_id')
+            ->join('floors', 'units.floor_id', '=', 'floors.id')
+            ->join('blocks', 'floors.block_id', '=', 'blocks.id')
+            ->join('projects', 'blocks.project_id', '=', 'projects.id')
+            ->select('reservations.id', 'units.id as unit_id', 'units.number as unit_number', 'floors.number as floor_number', 'blocks.name as block', 'projects.name as project')
+            ->where('reservations.user_id', '=', 1)
+            ->get();
+    }
+
+    public function deleteReservation($id)
+    {
+        return Reservation::where('id', $id)->delete();
     }
 }

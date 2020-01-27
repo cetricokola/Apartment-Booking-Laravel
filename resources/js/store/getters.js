@@ -15,6 +15,9 @@ let getters = {
     },
     units: state =>{
         return state.units
+    },
+    reservations: state =>{
+        return state.reservations
     }
 }
 export default getters

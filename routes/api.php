@@ -23,5 +23,6 @@ Route::get('/block/project_blocks/{id}', 'BlockController@getSpecificProjectBloc
 Route::get('/block/block_floors/{id}', 'FloorController@getSpecificBlockFloors');
 Route::get('/block/floor_units/{id}', 'UnitController@getSpecificFloorUnits');
 Route::get('/project/view_project/{id}', 'ProjectController@viewProject');
-
+Route::get('/fetch_user_reservations', 'ReservationController@fetchReservations');
+Route::delete('/delete_reservation/{id}', 'ReservationController@deleteReservation' );
 Route::post('/book_apartment', 'ReservationController@bookUnit');

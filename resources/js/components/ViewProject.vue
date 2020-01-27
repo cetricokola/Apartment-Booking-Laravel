@@ -3,30 +3,36 @@
         <h1>Cetric</h1>
         <h1>{{project.name}}</h1>
         <p>{{project.description}}</p>
-        <label for="name">Block</label><br><br>
-        <select class="custom-select" id="name" v-model="block_id">
-            <option v-for="block in blocks" v-bind:value=block.id>{{block.name}}</option>
-        </select>
-
-        <button @click="retrieveFloor" class="btn btn-primary">Next</button>
-        <div v-show="show_floors">
-            <label for="floor">Floors in block</label><br><br>
-            <select class="custom-select" id="floor" v-model="floor_id">
-                <option v-for="floor in floors" v-bind:value=floor.id>Floor {{floor.number}}</option>
+        <div v-if="show_select">
+            <label for="name">Block</label><br><br>
+            <select class="custom-select" id="name" v-model="block_id">
+                <option v-for="block in blocks" v-bind:value=block.id>{{block.name}}</option>
             </select>
-            <button @click="retrieveUnits" class="btn btn-primary">Next</button>
-        </div>
-        <div v-show="show_units">
-            <div class="grid-container">
-                <div v-for="unit in floor_units">
-                    <button @click="selectUnit(unit.id)" class="btn-success btn">{{unit.number}}</button>
-                    <button @click="removeUnit(unit.id)" class="btn-warning btn">{{unit.number}}</button>
+            <button @click="retrieveFloor" class="btn btn-primary">Next</button>
+            <div v-show="show_floors">
+                <label for="floor">Floors in block</label><br><br>
+                <select class="custom-select" id="floor" v-model="floor_id">
+                    <option v-for="floor in floors" v-bind:value=floor.id>Floor {{floor.number}}</option>
+                </select>
+                <button @click="retrieveUnits" class="btn btn-primary">Next</button>
+            </div>
+            <div v-show="show_units">
+                <div class="grid-container">
+                    <div v-for="unit in floor_units">
+                        <button @click="selectUnit(unit.id)" class="btn-success btn">{{unit.number}}</button>
+                        <button @click="removeUnit(unit.id)" class="btn-warning btn">{{unit.number}}</button>
+                    </div>
                 </div>
             </div>
+            <div v-if="book">
+                <p>Selected units: {{units}}</p>
+                <button @click="makeReservation()" class="btn btn-primary">Book</button>
+            </div>
         </div>
-        <div v-if="book">
-            <p>Selected units: {{units}}</p>
-            <button @click="makeReservation()" class="btn btn-primary">Book</button>
+        <div v-if="show_results">
+            <h1>Successful Reserved</h1>
+            <p>{{bookings}}</p>
+            <button class="btn" @click="bookAgain">Book again</button>
         </div>
     </div>
 </template>
@@ -46,7 +52,10 @@
                 block_id: '',
                 floor_id: '',
                 show_floors: false,
-                show_units: false
+                show_units: false,
+                show_select: true,
+                show_results: false,
+                bookings: []
             }
         },
         computed: {
@@ -106,10 +115,16 @@
                     units: this.units,
                 })
                     .then(res => {
-                        console.log(res.data)
+                        this.bookings = res.data;
+                        this.show_select = false;
+                        this.show_results = true;
                     }).catch(err => {
                     console.log(err)
                 })
+            },
+            bookAgain(){
+                this.show_select = true;
+                window.location.href = "/the_project"
             }
         }
     }
