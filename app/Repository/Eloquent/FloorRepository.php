@@ -15,7 +15,7 @@ class FloorRepository implements FloorRepositoryInterface
 
     public function floorsForSpecificBlock($id)
     {
-        return Floor::where('block_id', $id)->get();
+        return Floor::where('block_id', $id)->where('status', 'available')->get();
     }
 
     public function create(array $data)

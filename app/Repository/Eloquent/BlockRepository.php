@@ -14,7 +14,7 @@ class BlockRepository implements BlockRepositoryInterface
 
     public function blocksForSpecificProject($id)
     {
-        return Block::where('project_id', $id)->get();
+        return Block::where('project_id', $id)->where('status', 'available')->get();
     }
 
     public function create(array $data)

@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1ae5288-a068-4481-9228-6b2b214e0220" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/FloorRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/ReservationRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/UnitRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/FloorRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/UnitRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Block.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Block.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Floor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Floor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/BlockRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/BlockRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/FloorRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/FloorRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/UnitRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/UnitRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reservation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Unit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +179,8 @@
       <updated>1579760424417</updated>
       <workItem from="1579760428977" duration="46504000" />
       <workItem from="1579877909456" duration="5647000" />
-      <workItem from="1579943562002" duration="19104000" />
+      <workItem from="1579943562002" duration="20530000" />
+      <workItem from="1580029388327" duration="13019000" />
     </task>
     <servers />
   </component>
@@ -194,10 +192,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="602" y="39" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579870260641" />
-    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579967014798">
+    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580034432639">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579967014798" />
+    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580034432639" />
     <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.959@0.23.1680.959" timestamp="1579783090426" />
     <state x="548" y="314" key="NewPhpClassDialog" timestamp="1579959575290">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -217,6 +215,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="681" y="270" width="858" height="582" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579869947288" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1580111306548">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580111306548" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

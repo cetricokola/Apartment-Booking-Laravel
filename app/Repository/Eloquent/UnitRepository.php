@@ -16,12 +16,11 @@ class UnitRepository implements UnitRepositoryInterface
 
     public function unitsForSpecificFloor($id)
     {
-        return Unit::where('floor_id', $id)->get();
+        return Unit::where('floor_id', $id)->where('status', 'available')->get();
     }
 
     public function create(array $data)
     {
-
         return Unit::create($data);
     }
 
