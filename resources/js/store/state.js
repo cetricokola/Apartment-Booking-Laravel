@@ -4,6 +4,7 @@ let state = {
     details: [],
     blocks: [],
     units: [],
-    reservations: []
+    reservations: [],
+    clients: []
 }
 export default state;

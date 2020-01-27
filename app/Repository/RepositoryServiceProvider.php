@@ -14,7 +14,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->registerFloorRepository();
         $this->registerUnitRepository();
         $this->registerReservationRepository();
-
+        $this->registerManageProjectsReservationsRepository();
     }
 
     public function registerProjectRepository()
@@ -41,4 +41,10 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         return $this->app->bind('App\Repository\Contracts\ReservationRepositoryInterface', 'App\Repository\Eloquent\ReservationRepository');
     }
+    public function registerManageProjectsReservationsRepository()
+    {
+        return $this->app->bind('App\Repository\Contracts\ManageProjectsReservationsRepositoryInterface', 'App\Repository\Eloquent\ManageProjectsReservationsRepository');
+    }
+
+
 }

@@ -10,6 +10,7 @@ use App\Reservation;
 use App\Unit;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 
 class ReservationRepository implements ReservationRepositoryInterface
 {
@@ -23,7 +24,7 @@ class ReservationRepository implements ReservationRepositoryInterface
         $this->succeed = false;
     }
 
-    public function bookApartmentUnits($data)
+    public function bookApartmentUnits($data, $user)
     {
         if (sizeof($data) == 0) {
             return response()->json(['error' => 'Booking not successfull. No unit selected'], 403);
@@ -32,7 +33,7 @@ class ReservationRepository implements ReservationRepositoryInterface
             $newReservation = array();
             foreach ($data as $id) {
                 $reservation = new Reservation();
-                $reservation->user_id = 1;
+                $reservation->user_id = $user;
                 $reservation->unit_id = $id;
                 $reservation->save();
                 Unit::where('id', $id)->update(['status' => 'unavailable']);
@@ -84,8 +85,87 @@ class ReservationRepository implements ReservationRepositoryInterface
             ->get();
     }
 
+    public function fetchAllReservations()
+    {
+        return DB::table('reservations')
+            ->join('units', 'units.id', '=', 'reservations.unit_id')
+            ->join('users', 'users.id', '=', 'reservations.user_id')
+            ->join('floors', 'units.floor_id', '=', 'floors.id')
+            ->join('blocks', 'floors.block_id', '=', 'blocks.id')
+            ->join('projects', 'blocks.project_id', '=', 'projects.id')
+            ->select('reservations.id', 'users.email as client_email', 'users.name as client_name', 'units.number as unit_number', 'floors.number as floor_number', 'blocks.name as block', 'projects.name as project')
+            ->get();
+    }
+
     public function deleteReservation($id)
     {
-        return Reservation::where('id', $id)->delete();
+        DB::beginTransaction();
+        $units_available = 0;
+        $available_floor = 0;
+        $available_block = 0;
+        try {
+            $unit_ids = Reservation::where('id', $id)->pluck('unit_id');
+            Unit::where('id', intval($unit_ids[0]))->update(['status' => 'available']);
+            $this->$units_available = intval($unit_ids[0]);
+
+        } catch (ValidationException $e) {
+            DB::rollback();
+            return response()->json('Error occured in deleting the project', 403);
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+        try {
+            $floor_id = DB::table('units')->where('id', '=', $this->$units_available)->pluck('floor_id');
+            $available_floor_count = Unit::where('status', 'unavailable')->where('floor_id', '=', intval($floor_id[0]))->count();
+            if ($available_floor_count === 0) {
+                Floor::where('id', intval($floor_id[0]))->update(['status' => 'available']);
+            }
+            $this->$available_floor = intval($floor_id[0]);
+        } catch (ValidationException $e) {
+            DB::rollback();
+            return response()->json('Error occured in deleting the project', 403);
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+        try {
+            $block_id = DB::table('floors')->where('id', '=', $this->$available_floor)->pluck('block_id');
+            $available_block_count = Floor::where('status', 'unavailable')->where('block_id', '=', intval($block_id[0]))->count();
+            if ($available_block_count == 0) {
+                Block::where('id', intval($block_id[0]))->update(['status' => 'available']);
+            }
+            $this->$available_block = intval($block_id[0]);
+        } catch (ValidationException $e) {
+            DB::rollback();
+            return response()->json('Error occured in deleting the project', 403);
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+        try {
+            $project_id = DB::table('blocks')->where('id', '=', $this->$available_block)->pluck('project_id');
+            $available_project_count = Block::where('status', 'unavailable')->where('project_id', '=', intval($project_id[0]))->count();
+            if ($available_project_count == 0) {
+                Project::where('id', intval($project_id[0]))->update(['status' => 'available']);
+            }
+        } catch (ValidationException $e) {
+            DB::rollback();
+            return response()->json('Error occured in deleting the project', 403);
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+        //delete reservation
+        try {
+            Reservation::where('id', $id)->delete();
+        } catch (ValidationException $e) {
+            DB::rollback();
+            return response()->json('Error occured in deleting the project', 403);
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+        DB::commit();
     }
 }

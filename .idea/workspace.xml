@@ -2,21 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1ae5288-a068-4481-9228-6b2b214e0220" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/successful_reservation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ManageProjectReservationsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/ManageProjectsReservationsRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ManageProjectsReservationsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Project/BookForClient.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Project/Clients.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Project/Reservations.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/Contracts/ReservationRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Contracts/ReservationRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SuccessfullReservation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/getters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,15 +141,19 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1WmgwiIw7bOU4oDJra2eMBOBl6Z" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
@@ -183,27 +194,31 @@
       <workItem from="1579760428977" duration="46504000" />
       <workItem from="1579877909456" duration="5647000" />
       <workItem from="1579943562002" duration="20530000" />
-      <workItem from="1580029388327" duration="21876000" />
+      <workItem from="1580029388327" duration="28366000" />
+      <workItem from="1580133255163" duration="10270000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="602" y="39" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579870260641">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="602" y="39" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579870260641" />
-    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580120526284">
+    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580145466018">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580120526284" />
+    <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580145466018" />
     <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.959@0.23.1680.959" timestamp="1579783090426" />
-    <state x="548" y="314" key="NewPhpClassDialog" timestamp="1579959575290">
+    <state x="548" y="314" key="NewPhpClassDialog" timestamp="1580136480433">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="548" y="314" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579959575290" />
+    <state x="548" y="314" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580136480433" />
     <state x="548" y="310" key="NewPhpClassDialog/0.23.1680.959@0.23.1680.959" timestamp="1579782989291" />
     <state x="658" y="445" key="NewPhpFileDialog" timestamp="1580117858309">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -236,6 +251,11 @@
           <line>15</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/components/ViewProject.vue</url>
+          <line>5</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ProjectRepository.php</url>
           <line>26</line>
@@ -244,6 +264,29 @@
             <option name="methodName" value="delete" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ManageProjectsReservationsRepository.php</url>
+          <line>168</line>
+          <properties>
+            <option name="className" value="\App\Repository\Eloquent\ManageProjectsReservationsRepository" />
+            <option name="methodName" value="deleteFloors" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ManageProjectsReservationsRepository.php</url>
+          <line>209</line>
+          <properties>
+            <option name="className" value="\App\Repository\Eloquent\ManageProjectsReservationsRepository" />
+            <option name="methodName" value="deleteUnits" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ManageProjectsReservationsRepository.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

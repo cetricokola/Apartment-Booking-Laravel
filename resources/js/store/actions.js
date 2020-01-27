@@ -41,6 +41,22 @@ let actions = {
             console.log(err)
         })
     },
+    fetchAllReservations({commit}) {
+        HTTP.get('fetch_all_reservations')
+            .then(res => {
+                commit('FETCH_RESERVATIONS', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+    fetchClients({commit}) {
+        HTTP.get('fetch_clients')
+            .then(res => {
+                commit('FETCH_CLIENTS', res.data)
+            }).catch(err => {
+            console.log(err)
+        })
+    },
     selectUnit({commit}, id) {
         commit('SELECT_UNIT', id);
     },
@@ -51,6 +67,14 @@ let actions = {
         HTTP.delete(`delete_reservation/${reservation.id}`)
             .then(res => {
                 commit('DELETE_RESERVATION', reservation);
+            }).catch(err => {
+            console.log(err)
+        })
+    },
+    removeClient({commit}, client) {
+        HTTP.delete(`remove_client/${client.id}`)
+            .then(res => {
+                commit('DELETE_CLIENT', client);
             }).catch(err => {
             console.log(err)
         })

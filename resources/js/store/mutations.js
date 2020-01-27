@@ -15,17 +15,24 @@ let mutations = {
     FETCH_RESERVATIONS(state, reservation) {
         return state.reservations = reservation
     },
+    FETCH_CLIENTS(state, client) {
+        return state.clients = client
+    },
     SELECT_UNIT(state, unit) {
         state.units.unshift(unit)
     },
     REMOVE_UNIT(state, unit) {
         let index = state.units.findIndex(item => item === unit);
         Vue.delete(state.units, index);
-        // state.shows.splice(index, 1)
+
     },
     DELETE_RESERVATION(state, reservation) {
         let index = state.reservations.findIndex(item => item.id === reservation.id);
         Vue.delete(state.reservations, index);
+    },
+    DELETE_CLIENT(state, client) {
+        let index = state.clients.findIndex(item => item.id === client.id);
+        Vue.delete(state.clients, index);
     }
 
 };

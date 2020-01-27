@@ -12,6 +12,15 @@
                     <div class="helper" @click="selectedComponent = 'AddBlocksFloorsUnits'">
                         <h6>Add Project Details</h6>
                     </div>
+                    <div class="helper" @click="selectedComponent = 'BookForClient'">
+                        <h6>Book For Client</h6>
+                    </div>
+                    <div class="helper" @click="selectedComponent = 'Clients'">
+                        <h6>View Clients</h6>
+                    </div>
+                    <div class="helper" @click="selectedComponent = 'Reservations'">
+                        <h6>View Reservations</h6>
+                    </div>
                 </div>
                 <div class="col-md-7">
                     <component :is="selectedComponent"/>
@@ -28,7 +37,10 @@
 
         components: {
             AddBlocksFloorsUnits: () => import('./Project/AddBlocksFloorsUnits'),
-            CreateProject: () => import('./Project/CreateProject')
+            CreateProject: () => import('./Project/CreateProject'),
+            BookForClient: ()=> import('./Project/BookForClient'),
+            Clients: () => import('./Project/Clients'),
+            Reservations: () => import('./Project/Reservations')
         },
         data: () => {
             return {

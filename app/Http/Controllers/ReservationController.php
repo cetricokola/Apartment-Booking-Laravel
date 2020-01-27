@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ProjectResource;
 use App\Repository\Contracts\ReservationRepositoryInterface;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
 
 class ReservationController extends Controller
 {
@@ -15,17 +13,25 @@ class ReservationController extends Controller
     public function __construct(ReservationRepositoryInterface $reservation)
     {
         $this->reservation = $reservation;
-//        $this->middleware('auth:api');
     }
 
     public function bookUnit(Request $request)
     {
-//        Log::info($request->user('api')->id);
-        $reservation = $this->reservation->bookApartmentUnits($request->units);
+        $reservation = $this->reservation->bookApartmentUnits($request->units, 1);
         ProjectResource::withoutWrapping();
         return ProjectResource::collection($reservation);
     }
-    public function fetchReservations(){
+
+    public function bookForClient(Request $request){
+        $reservation = $this->reservation->bookApartmentUnits($request->units, $request->user);
+        ProjectResource::withoutWrapping();
+        return ProjectResource::collection($reservation);
+    }
+    public function fetchAllReservations(){
+        $reservations = $this->reservation->fetchallReservations();
+        return response()->json($reservations);
+    }
+    public function fetchSpecificClientReservations(){
         $reservations = $this->reservation->fetchReservations();
         return response()->json($reservations);
     }

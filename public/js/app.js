@@ -2046,6 +2046,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AdminDash",
@@ -2054,7 +2063,16 @@ __webpack_require__.r(__webpack_exports__);
       return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./Project/AddBlocksFloorsUnits */ "./resources/js/components/Project/AddBlocksFloorsUnits.vue"));
     },
     CreateProject: function CreateProject() {
-      return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./Project/CreateProject */ "./resources/js/components/Project/CreateProject.vue"));
+      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./Project/CreateProject */ "./resources/js/components/Project/CreateProject.vue"));
+    },
+    BookForClient: function BookForClient() {
+      return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./Project/BookForClient */ "./resources/js/components/Project/BookForClient.vue"));
+    },
+    Clients: function Clients() {
+      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./Project/Clients */ "./resources/js/components/Project/Clients.vue"));
+    },
+    Reservations: function Reservations() {
+      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./Project/Reservations */ "./resources/js/components/Project/Reservations.vue"));
     }
   },
   data: function data() {
@@ -38414,6 +38432,45 @@ var render = function() {
               }
             },
             [_c("h6", [_vm._v("Add Project Details")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "helper",
+              on: {
+                click: function($event) {
+                  _vm.selectedComponent = "BookForClient"
+                }
+              }
+            },
+            [_c("h6", [_vm._v("Book For Client")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "helper",
+              on: {
+                click: function($event) {
+                  _vm.selectedComponent = "Clients"
+                }
+              }
+            },
+            [_c("h6", [_vm._v("View Clients")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "helper",
+              on: {
+                click: function($event) {
+                  _vm.selectedComponent = "Reservations"
+                }
+              }
+            },
+            [_c("h6", [_vm._v("View Reservations")])]
           )
         ]),
         _vm._v(" "),
@@ -52509,18 +52566,42 @@ var actions = {
       console.log(err);
     });
   },
-  selectUnit: function selectUnit(_ref6, id) {
+  fetchAllReservations: function fetchAllReservations(_ref6) {
     var commit = _ref6.commit;
+    _http_common__WEBPACK_IMPORTED_MODULE_0__["HTTP"].get('fetch_all_reservations').then(function (res) {
+      commit('FETCH_RESERVATIONS', res.data);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  },
+  fetchClients: function fetchClients(_ref7) {
+    var commit = _ref7.commit;
+    _http_common__WEBPACK_IMPORTED_MODULE_0__["HTTP"].get('fetch_clients').then(function (res) {
+      commit('FETCH_CLIENTS', res.data);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  },
+  selectUnit: function selectUnit(_ref8, id) {
+    var commit = _ref8.commit;
     commit('SELECT_UNIT', id);
   },
-  removeUnit: function removeUnit(_ref7, id) {
-    var commit = _ref7.commit;
+  removeUnit: function removeUnit(_ref9, id) {
+    var commit = _ref9.commit;
     commit('REMOVE_UNIT', id);
   },
-  deleteReservation: function deleteReservation(_ref8, reservation) {
-    var commit = _ref8.commit;
+  deleteReservation: function deleteReservation(_ref10, reservation) {
+    var commit = _ref10.commit;
     _http_common__WEBPACK_IMPORTED_MODULE_0__["HTTP"]["delete"]("delete_reservation/".concat(reservation.id)).then(function (res) {
       commit('DELETE_RESERVATION', reservation);
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  },
+  removeClient: function removeClient(_ref11, client) {
+    var commit = _ref11.commit;
+    _http_common__WEBPACK_IMPORTED_MODULE_0__["HTTP"]["delete"]("remove_client/".concat(client.id)).then(function (res) {
+      commit('DELETE_CLIENT', client);
     })["catch"](function (err) {
       console.log(err);
     });
@@ -52559,6 +52640,9 @@ var getters = {
   },
   reservations: function reservations(state) {
     return state.reservations;
+  },
+  clients: function clients(state) {
+    return state.clients;
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (getters);
@@ -52591,6 +52675,9 @@ var mutations = {
   FETCH_RESERVATIONS: function FETCH_RESERVATIONS(state, reservation) {
     return state.reservations = reservation;
   },
+  FETCH_CLIENTS: function FETCH_CLIENTS(state, client) {
+    return state.clients = client;
+  },
   SELECT_UNIT: function SELECT_UNIT(state, unit) {
     state.units.unshift(unit);
   },
@@ -52598,13 +52685,19 @@ var mutations = {
     var index = state.units.findIndex(function (item) {
       return item === unit;
     });
-    Vue["delete"](state.units, index); // state.shows.splice(index, 1)
+    Vue["delete"](state.units, index);
   },
   DELETE_RESERVATION: function DELETE_RESERVATION(state, reservation) {
     var index = state.reservations.findIndex(function (item) {
       return item.id === reservation.id;
     });
     Vue["delete"](state.reservations, index);
+  },
+  DELETE_CLIENT: function DELETE_CLIENT(state, client) {
+    var index = state.clients.findIndex(function (item) {
+      return item.id === client.id;
+    });
+    Vue["delete"](state.clients, index);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (mutations);
@@ -52626,7 +52719,8 @@ var state = {
   details: [],
   blocks: [],
   units: [],
-  reservations: []
+  reservations: [],
+  clients: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (state);
 
