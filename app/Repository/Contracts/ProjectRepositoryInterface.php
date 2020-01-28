@@ -14,4 +14,5 @@ interface ProjectRepositoryInterface
     public function delete($id);
 
     public function show($id);
+    public function addImage($file, $ifExist, $id);
 }

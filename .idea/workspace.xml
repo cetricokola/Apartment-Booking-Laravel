@@ -2,28 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1ae5288-a068-4481-9228-6b2b214e0220" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ManageProjectReservationsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Contracts/ManageProjectsReservationsRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ManageProjectsReservationsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Project/BookForClient.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Project/Clients.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Project/Reservations.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Events/ClientBookedApartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Listeners/SendNotificationEmail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Traits/Messaging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215041.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215073.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215077.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215079.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215227.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215318.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215361.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215880.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580215953.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216290.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216359.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216368.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216369.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216370.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216418.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216479.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216525.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216578.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580216690.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580217084.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580217113.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580217115.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580217981.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218038.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218101.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218140.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218141.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218145.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218211.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218286.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218463.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218499.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218534.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218821.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580218977.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580219298.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580219596.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580219619.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580220044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580220079.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580220322.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580220332.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580221632.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1580223054.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580226200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/emails/bookings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cetsuites.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cetsuites.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/Contracts/ReservationRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Contracts/ReservationRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Contracts/ProjectRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Contracts/ProjectRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/ProjectRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ProjectRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LandingPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LandingPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Project/CreateProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Project/CreateProject.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/http.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/http.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +197,13 @@
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/africastalking/africastalking" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WmgwiIw7bOU4oDJra2eMBOBl6Z" />
@@ -157,6 +223,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -195,7 +262,9 @@
       <workItem from="1579877909456" duration="5647000" />
       <workItem from="1579943562002" duration="20530000" />
       <workItem from="1580029388327" duration="28366000" />
-      <workItem from="1580133255163" duration="10270000" />
+      <workItem from="1580133255163" duration="21526000" />
+      <workItem from="1580204684441" duration="5199000" />
+      <workItem from="1580210195161" duration="16503000" />
     </task>
     <servers />
   </component>
@@ -215,15 +284,15 @@
     </state>
     <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580145466018" />
     <state x="578" y="264" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.959@0.23.1680.959" timestamp="1579783090426" />
-    <state x="548" y="314" key="NewPhpClassDialog" timestamp="1580136480433">
+    <state x="548" y="314" key="NewPhpClassDialog" timestamp="1580228301840">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="548" y="314" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580136480433" />
+    <state x="548" y="314" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580228301840" />
     <state x="548" y="310" key="NewPhpClassDialog/0.23.1680.959@0.23.1680.959" timestamp="1579782989291" />
-    <state x="658" y="445" key="NewPhpFileDialog" timestamp="1580117858309">
+    <state x="658" y="445" key="NewPhpFileDialog" timestamp="1580191867236">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="658" y="445" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580117858309" />
+    <state x="658" y="445" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580191867236" />
     <state x="658" y="429" key="NewPhpFileDialog/0.23.1680.959@0.23.1680.959" timestamp="1579782930230" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1579877541406">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -253,12 +322,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/ViewProject.vue</url>
-          <line>5</line>
+          <line>6</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/components/Project/CreateProject.vue</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ProjectRepository.php</url>
-          <line>26</line>
+          <line>28</line>
           <properties>
             <option name="className" value="\App\Repository\Eloquent\ProjectRepository" />
             <option name="methodName" value="delete" />
@@ -287,6 +361,11 @@
           <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ManageProjectsReservationsRepository.php</url>
           <line>16</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Repository/Eloquent/ProjectRepository.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

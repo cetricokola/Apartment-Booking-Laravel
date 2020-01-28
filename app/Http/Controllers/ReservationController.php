@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ClientBookedApartment;
 use App\Http\Resources\ProjectResource;
 use App\Repository\Contracts\ReservationRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -17,7 +19,7 @@ class ReservationController extends Controller
 
     public function bookUnit(Request $request)
     {
-        $reservation = $this->reservation->bookApartmentUnits($request->units, 1);
+        $reservation = $this->reservation->bookApartmentUnits($request->units, Auth::id());
         ProjectResource::withoutWrapping();
         return ProjectResource::collection($reservation);
     }

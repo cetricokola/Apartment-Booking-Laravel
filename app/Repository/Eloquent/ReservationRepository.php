@@ -4,16 +4,21 @@ namespace App\Repository\Eloquent;
 
 use App\Block;
 use App\Floor;
+use App\Http\Controllers\Client;
 use App\Project;
 use App\Repository\Contracts\ReservationRepositoryInterface;
 use App\Reservation;
+use App\Traits\Messaging;
 use App\Unit;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
 class ReservationRepository implements ReservationRepositoryInterface
 {
+    use Messaging;
     /**
      * @var bool
      */
@@ -24,14 +29,14 @@ class ReservationRepository implements ReservationRepositoryInterface
         $this->succeed = false;
     }
 
-    public function bookApartmentUnits($data, $user)
+    public function bookApartmentUnits($unitsId, $user)
     {
-        if (sizeof($data) == 0) {
+        if (sizeof($unitsId) == 0) {
             return response()->json(['error' => 'Booking not successfull. No unit selected'], 403);
         }
         try {
             $newReservation = array();
-            foreach ($data as $id) {
+            foreach ($unitsId as $id) {
                 $reservation = new Reservation();
                 $reservation->user_id = $user;
                 $reservation->unit_id = $id;
@@ -58,7 +63,8 @@ class ReservationRepository implements ReservationRepositoryInterface
             return response()->json(['error' => 'Error occurred in booking the apartment.'], 403);
         }
         if ($this->succeed == true) {
-            foreach ($data as $id) {
+            $data = [];
+            foreach ($unitsId as $id) {
                 $reserv = DB::table('reservations')
                     ->join('units', 'units.id', '=', 'reservations.unit_id')
                     ->join('floors', 'units.floor_id', '=', 'floors.id')
@@ -66,9 +72,19 @@ class ReservationRepository implements ReservationRepositoryInterface
                     ->select('reservations.id', 'units.id as unit_id', 'units.number as unit_number', 'floors.number as floor_number', 'blocks.name as block')
                     ->where('reservations.unit_id', '=', $id)
                     ->get();
-                array_push($newReservation, $reserv);
+
+                array_push($data, $reserv);
             }
-            return $newReservation;
+
+            Mail::send('emails.bookings', ['details' => json_encode($data), 'name'=>Auth::user()->name], function ($message) {
+                $message->to(Auth::user()->email)
+                    ->subject('Apartment Reservations');
+                $message->from('cokola@cytonn.com');
+            });
+
+            $message = "Dear ".Auth::user()->name." you have successfully booked one of our apartments. Log in to your cetsuites account to view more details.Thankk you.";
+            $sms = $this->sendSms("0".Auth::user()->phone, $message);
+            return $data;
         }
     }
 

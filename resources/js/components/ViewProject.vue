@@ -3,6 +3,7 @@
         <h1>Cetric</h1>
         <h1>{{project.name}}</h1>
         <p>{{project.description}}</p>
+        <img :src="`/project_images/${project.image}`" alt="">
         <div v-if="show_select">
             <label for="name">Block</label><br><br>
             <select class="custom-select" id="name" v-model="block_id">
@@ -144,5 +145,4 @@
         text-align: center;
         padding: 0 10px 0 10px
     }
-
 </style>

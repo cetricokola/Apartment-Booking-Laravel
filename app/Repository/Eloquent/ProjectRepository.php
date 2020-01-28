@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Repository\Eloquent;
+
 use App\Project;
 use App\Repository\Contracts\ProjectRepositoryInterface;
+use Intervention\Image\Facades\Image;
 
 class ProjectRepository implements ProjectRepositoryInterface
 {
@@ -32,5 +34,11 @@ class ProjectRepository implements ProjectRepositoryInterface
     public function show($id)
     {
         return Project::findOrFail($id);
+    }
+
+
+    public function addImage($file, $ifExist, $id)
+    {
+        // TODO: Implement addImage() method.
     }
 }

@@ -11,6 +11,8 @@ use App\Unit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
+use Intervention\Image\Facades\Image;
+
 
 class ProjectController extends Controller
 {
@@ -115,8 +117,21 @@ class ProjectController extends Controller
 
     }
 
-    public function fetchAll()
+    public function addImage(Request $request)
     {
+        if ($request->hasFile('file')) {
+            $fileName = time() . '.' . $request->file->getClientOriginalExtension();
+            $request->file->move(public_path('project_images'), $fileName);
+            Project::where('id', $request->id)->update(['image' => $fileName]);
 
+            return response()->json([
+                'success' => true,
+                'message' => 'You have successfully upload file'
+            ]);
+        }
+        return response()->json([
+            'success' => false,
+            'message' => 'Error in uploading the file'
+        ]);
     }
 }

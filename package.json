@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "node-sass": "^4.13.1",
+        "sweetalert": "^2.1.2",
         "vuetify": "^2.2.6",
         "vuetify-loader": "^1.4.3"
     }

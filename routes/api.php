@@ -32,5 +32,6 @@ Route::post('/get_user', 'Client@getUser');
 Route::get('/fetch_clients', 'Client@viewclients');
 Route::delete('/remove_client/{id}', 'Client@removeClient');
 Route::delete('/delete_project/{id}', 'ManageProjectReservationsController@deleteProject');
+Route::post('/add_image/{id}', 'ProjectController@addImage');
 
 

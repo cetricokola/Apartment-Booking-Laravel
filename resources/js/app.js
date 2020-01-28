@@ -31,8 +31,10 @@ Vue.component('viewproject', require('./components/ViewProject').default);
  */
 // import router from './router'
 import store from './store/store'
+import swal from 'sweetalert';
 const app = new Vue({
     el: '#app',
     store,
+    swal,
     // router,
 });
