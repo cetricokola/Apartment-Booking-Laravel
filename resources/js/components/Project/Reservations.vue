@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+        <div class="font-bold h1 text-center">
+            <p>Current Reservations</p>
+        </div>
         <div v-if="reservations.length> 0">
             <table class="table">
                 <thead class="thead-dark">
@@ -51,6 +54,7 @@
         methods: {
             deleteReservation(reservation) {
                 this.$store.dispatch('deleteReservation', reservation);
+                swal("Reservation deleted");
             }
         }
     }

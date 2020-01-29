@@ -31,8 +31,11 @@ class ReservationRepository implements ReservationRepositoryInterface
 
     public function bookApartmentUnits($unitsId, $user)
     {
+        if ($user == ''){
+            return response()->json(['error' => false, 'status'=>404], 404);
+        }
         if (sizeof($unitsId) == 0) {
-            return response()->json(['error' => 'Booking not successfull. No unit selected'], 403);
+            return response()->json(['error' => 'Booking not successfull. No unit selected', 'status'=>403], 403);
         }
         try {
             $newReservation = array();
@@ -82,8 +85,8 @@ class ReservationRepository implements ReservationRepositoryInterface
                 $message->from('cokola@cytonn.com');
             });
 
-            $message = "Dear ".Auth::user()->name." you have successfully booked one of our apartments. Log in to your cetsuites account to view more details.Thankk you.";
-            $sms = $this->sendSms("0".Auth::user()->phone, $message);
+//            $message = "Dear ".Auth::user()->name." you have successfully booked one of our apartments. Log in to your cetsuites account to view more details.Thankk you.";
+//            $sms = $this->sendSms("0".Auth::user()->phone, $message);
             return $data;
         }
     }

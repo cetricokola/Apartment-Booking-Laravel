@@ -12,4 +12,6 @@ interface ManageProjectsReservationsRepositoryInterface
     public function deleteFloors($id);
 
     public function deleteUnits($id);
+
+    public function editProject($id, $data);
 }

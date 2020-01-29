@@ -78,6 +78,14 @@ let actions = {
             }).catch(err => {
             console.log(err)
         })
+    },
+    deleteProject({commit}, project) {
+        HTTP.delete(`delete_project/${project.id}`)
+            .then(res => {
+                commit('DELETE_PROJECT', project);
+            }).catch(err => {
+            console.log(err)
+        })
     }
 };
 export default actions;

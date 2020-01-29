@@ -232,4 +232,9 @@ class ManageProjectsReservationsRepository implements ManageProjectsReservations
         }
         DB::commit();
     }
+
+    public function editProject($id, $data)
+    {
+        return Project::where('id', $id)->update($data);
+    }
 }

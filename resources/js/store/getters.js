@@ -13,14 +13,17 @@ let getters = {
     blocks: state => {
         return state.blocks
     },
-    units: state =>{
+    units: state => {
         return state.units
     },
-    reservations: state =>{
+    reservations: state => {
         return state.reservations
     },
-    clients: state =>{
+    clients: state => {
         return state.clients
+    },
+    selected_units: state => {
+        return [...new Set(state.units)];
     }
 }
 export default getters

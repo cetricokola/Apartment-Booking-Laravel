@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d29e27f1905c2e22c9c68a89ee8c2092",
+    "content-hash": "f6497d5b38791e25e777bf38a0d7fe20",
     "packages": [
         {
             "name": "africastalking/africastalking",
@@ -57,6 +57,48 @@
                 "voice"
             ],
             "time": "2019-09-09T11:29:11+00:00"
+        },
+        {
+            "name": "components/jquery",
+            "version": "3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "901828b7968b18319e377dc23d466f28426ee083"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/901828b7968b18319e377dc23d466f28426ee083",
+                "reference": "901828b7968b18319e377dc23d466f28426ee083",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JS Foundation and other contributors"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2019-10-23T05:15:13+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -735,16 +777,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.12.0",
+            "version": "v6.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "8e189a8dee7ff76bf50acb7e80aa1a36afaf54d4"
+                "reference": "f0059760814b76fb5f98bb80628607c7560ebe58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/8e189a8dee7ff76bf50acb7e80aa1a36afaf54d4",
-                "reference": "8e189a8dee7ff76bf50acb7e80aa1a36afaf54d4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f0059760814b76fb5f98bb80628607c7560ebe58",
+                "reference": "f0059760814b76fb5f98bb80628607c7560ebe58",
                 "shasum": ""
             },
             "require": {
@@ -878,7 +920,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-01-21T15:10:03+00:00"
+            "time": "2020-01-28T21:44:01+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3525,6 +3567,45 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "zurb/foundation",
+            "version": "v6.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/foundation/foundation-sites.git",
+                "reference": "ef9389ea56bac2654b81e04b28f1cfad6d743c33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/foundation/foundation-sites/zipball/ef9389ea56bac2654b81e04b28f1cfad6d743c33",
+                "reference": "ef9389ea56bac2654b81e04b28f1cfad6d743c33",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ZURB, Inc.",
+                    "email": "foundation@zurb.com",
+                    "homepage": "http://zurb.com"
+                }
+            ],
+            "description": "The most advanced responsive front-end framework in the world.",
+            "homepage": "https://get.foundation",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "scss"
+            ],
+            "time": "2019-12-13T19:45:58+00:00"
         }
     ],
     "packages-dev": [

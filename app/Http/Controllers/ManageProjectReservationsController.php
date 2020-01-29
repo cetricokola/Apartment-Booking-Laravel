@@ -19,4 +19,8 @@ class ManageProjectReservationsController extends Controller
         $project = $this->project->deleteProject($request->id);
         return response()->json($project);
     }
+    public function editProject(Request $request){
+        $project = $this->project->editProject($request->id, $request->all());
+        return response()->json($project);
+    }
 }

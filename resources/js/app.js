@@ -20,7 +20,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('successfull-reservations', require('./components/SuccessfullReservation').default);
+Vue.component('client-reservations', require('./components/ClientReservations').default);
 Vue.component('dashboard', require('./components/Dashboard').default);
 Vue.component('landingpage', require('./components/LandingPage').default);
 Vue.component('viewproject', require('./components/ViewProject').default);
@@ -30,6 +30,7 @@ Vue.component('viewproject', require('./components/ViewProject').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 // import router from './router'
+
 import store from './store/store'
 import swal from 'sweetalert';
 const app = new Vue({

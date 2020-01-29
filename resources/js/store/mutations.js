@@ -33,7 +33,10 @@ let mutations = {
     DELETE_CLIENT(state, client) {
         let index = state.clients.findIndex(item => item.id === client.id);
         Vue.delete(state.clients, index);
+    },
+    DELETE_PROJECT(state, project) {
+        let index = state.projects.findIndex(item => item.id === project.id);
+        Vue.delete(state.projects, index);
     }
-
 };
 export default mutations;

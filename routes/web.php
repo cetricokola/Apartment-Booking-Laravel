@@ -17,17 +17,18 @@ Route::get('/', function () {
 Route::get('/the_project', function () {
     return view('project');
 });
-Route::get('/successfully_booked', function () {
-    return view('successful_reservation');
+Route::get('/your_reservations', function () {
+    return view('client_reservation');
 });
 Route::get('/dashboard', function () {
-    return view('vue');
+    return view('dashboard');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/project/create', 'ProjectController@store');
+Route::delete('/delete_project/{id}', 'ManageProjectReservationsController@deleteProject');
 Route::get('/project/fetch', 'ProjectController@index');
 Route::post('/project/add_blocks_floor_units', 'ProjectController@createBlocksAndFloorsAndUnits');
 Route::get('/block/project_blocks/{id}', 'BlockController@getSpecificProjectBlocks');
@@ -43,5 +44,6 @@ Route::post('/get_user', 'Client@getUser');
 Route::get('/fetch_clients', 'Client@viewclients');
 Route::delete('/remove_client/{id}', 'Client@removeClient');
 Route::delete('/delete_project/{id}', 'ManageProjectReservationsController@deleteProject');
+Route::post('/edit_project/{id}', 'ManageProjectReservationsController@editProject');
 Route::post('/add_image/{id}', 'ProjectController@addImage');
 
