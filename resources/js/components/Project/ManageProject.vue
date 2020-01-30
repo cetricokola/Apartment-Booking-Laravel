@@ -2,7 +2,7 @@
     <div>
         <div class="w-75 mx-auto">
             <div class="font-bold mb-4 h1">
-                <p>Add details to the project</p>
+                <p>Alter the project</p>
             </div>
             <hr>
             <div class="flex mt-5">

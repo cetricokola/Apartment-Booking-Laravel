@@ -2137,22 +2137,22 @@ __webpack_require__.r(__webpack_exports__);
   name: "AdminDash",
   components: {
     AddBlocksFloorsUnits: function AddBlocksFloorsUnits() {
-      return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./Project/AddBlocksFloorsUnits */ "./resources/js/components/Project/AddBlocksFloorsUnits.vue"));
+      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./Project/AddBlocksFloorsUnits */ "./resources/js/components/Project/AddBlocksFloorsUnits.vue"));
     },
     CreateProject: function CreateProject() {
       return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./Project/CreateProject */ "./resources/js/components/Project/CreateProject.vue"));
     },
     BookForClient: function BookForClient() {
-      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./Project/BookForClient */ "./resources/js/components/Project/BookForClient.vue"));
+      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./Project/BookForClient */ "./resources/js/components/Project/BookForClient.vue"));
     },
     Clients: function Clients() {
-      return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./Project/Clients */ "./resources/js/components/Project/Clients.vue"));
+      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./Project/Clients */ "./resources/js/components/Project/Clients.vue"));
     },
     Reservations: function Reservations() {
       return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./Project/Reservations */ "./resources/js/components/Project/Reservations.vue"));
     },
     ManageProject: function ManageProject() {
-      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./Project/ManageProject */ "./resources/js/components/Project/ManageProject.vue"));
+      return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./Project/ManageProject */ "./resources/js/components/Project/ManageProject.vue"));
     }
   },
   data: function data() {

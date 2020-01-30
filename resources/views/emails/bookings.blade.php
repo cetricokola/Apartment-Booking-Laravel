@@ -5,9 +5,10 @@
     <title>Document</title>
 </head>
 <body>
-{{--<h1>Hi {{$name}}</h1>--}}
-{{$details}}
-<p>{{$name}}</p>
-<p>yes</p>
+<div class="container">
+    <h5>You have reserved the following units</h5>
+    <p>Dear {{$name}}</p>
+    {{$details}}
+</div>
 </body>
 </html>

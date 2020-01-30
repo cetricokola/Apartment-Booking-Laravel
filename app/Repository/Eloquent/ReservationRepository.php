@@ -85,8 +85,8 @@ class ReservationRepository implements ReservationRepositoryInterface
                 $message->from('cokola@cytonn.com');
             });
 
-//            $message = "Dear ".Auth::user()->name." you have successfully booked one of our apartments. Log in to your cetsuites account to view more details.Thankk you.";
-//            $sms = $this->sendSms("0".Auth::user()->phone, $message);
+            $message = "Dear ".Auth::user()->name." you have successfully booked one of our apartments. Log in to your cetsuites account to view more details.Thankk you.";
+            $sms = $this->sendSms("0".Auth::user()->phone, $message);
             return $data;
         }
     }

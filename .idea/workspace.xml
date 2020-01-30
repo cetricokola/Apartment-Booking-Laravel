@@ -2,97 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1ae5288-a068-4481-9228-6b2b214e0220" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/alma.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/almah.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/project_images/1580289115.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/project_images/1580289566.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/css/foundation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/css/foundation.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/js/vendor/foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/js/vendor/foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/js/vendor/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/foundation/js/vendor/what-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_settings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cetsuites.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cetsuites.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ProojectFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580334129.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580363823.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580363870.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580364937.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580365041.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580365257.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/project_images/1580365459.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/LandingTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/createProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ReservationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215041.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215073.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215077.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215079.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215227.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215318.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215361.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215880.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580215953.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216290.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216359.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216368.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216369.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216370.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216418.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216479.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216525.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216578.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580216690.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580217084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580217113.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580217115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580217981.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218141.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218211.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218286.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218463.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218499.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218534.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218821.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580218977.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580219298.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580219596.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580219619.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580220044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580220079.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580220322.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580220332.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580221632.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1580223054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/LandingPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LandingPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Project/CreateProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Project/CreateProject.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Projects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ViewProject.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Project/ManageProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Project/ManageProject.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/bookings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/bookings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,6 +214,7 @@
       <workItem from="1580204684441" duration="5199000" />
       <workItem from="1580210195161" duration="27503000" />
       <workItem from="1580286560289" duration="36939000" />
+      <workItem from="1580332568459" duration="16557000" />
     </task>
     <servers />
   </component>
@@ -291,6 +225,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="168" key="#Log_Highlighting_(ideolog)" timestamp="1580345722426">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="440" y="168" key="#Log_Highlighting_(ideolog)/0.23.1680.959@0.23.1680.959" timestamp="1580345722426" />
     <state x="602" y="39" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579870260641">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -326,20 +264,21 @@
     </state>
     <state x="658" y="445" key="NewPhpFileDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580191867236" />
     <state x="658" y="429" key="NewPhpFileDialog/0.23.1680.959@0.23.1680.959" timestamp="1579782930230" />
-    <state x="341" y="164" key="SettingsEditor" timestamp="1579877541406">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="341" y="173" key="SettingsEditor" timestamp="1580346798493">
+      <screen x="0" y="23" width="1680" height="959" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1579877541406" />
+    <state x="341" y="173" key="SettingsEditor/0.23.1680.959@0.23.1680.959" timestamp="1580346798493" />
     <state x="681" y="270" width="858" height="582" key="find.popup" timestamp="1580311356883">
       <screen x="0" y="23" width="1680" height="959" />
     </state>
     <state x="681" y="270" width="858" height="582" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580118390593" />
     <state x="681" y="270" width="858" height="582" key="find.popup/0.23.1680.959@0.23.1680.959" timestamp="1580311356883" />
-    <state x="505" y="236" width="670" height="618" key="search.everywhere.popup" timestamp="1580278206470">
+    <state x="505" y="236" width="670" height="618" key="search.everywhere.popup" timestamp="1580357850131">
       <screen x="0" y="23" width="1680" height="959" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580111306548" />
-    <state x="505" y="236" width="670" height="618" key="search.everywhere.popup/0.23.1680.959@0.23.1680.959" timestamp="1580278206470" />
+    <state x="505" y="236" width="670" height="618" key="search.everywhere.popup/0.23.1680.959@0.23.1680.959" timestamp="1580357850131" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -362,19 +301,16 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/Dashboard.vue</url>
           <line>3</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/Project/BookForClient.vue</url>
           <line>38</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/ClientReservations.vue</url>
           <line>48</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
